@@ -1,0 +1,23 @@
+{
+  "name": "casern",
+  "version": "1.0.0",
+  "description": "a unidirectional data-flow manager for persistent, multi-tennent state machines",
+  "bin": "./bin/cli.js",
+  "main": "./lib/index.js",
+  "devDependencies": {
+    "standard": "^10.0.2",
+    "tap": "^10.5.2",
+    "tape": "^4.6.3"
+  },
+  "scripts": {
+    "test": "standard && ./node_modules/.bin/tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanramage/casern.git"
+  },
+  "bugs": {
+    "url": "http://github.com/ryanramage/casern/issues"
+  },
+  "homepage": "http://github.com/ryanramage/casern"
+}

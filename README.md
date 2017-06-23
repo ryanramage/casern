@@ -1,5 +1,7 @@
 # casern
 
+![Build Status](https://travis-ci.org/ryanramage/casern.svg?branch=master)
+
 Casern like redux but for when you have a lot of little state machines. For example handling chatbot states across thousands of conversations.
 
 The structure of data flow is based on [barracks](https://www.npmjs.com/package/barracks). In casern, the state is persistent, and you can have a bunch of different state machines.

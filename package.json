@@ -11,7 +11,7 @@
     "tape": "^4.6.3"
   },
   "scripts": {
-    "test": "standard && ./node_modules/.bin/tap test/*.js"
+    "test": "standard && ./node_modules/.bin/tap --100 test/*.js"
   },
   "repository": {
     "type": "git",

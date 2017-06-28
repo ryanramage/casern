@@ -2,7 +2,9 @@
 
 [![Build Status](https://secure.travis-ci.org/ryanramage/casern.svg?branch=master)](http://travis-ci.org/ryanramage/casern) TAP 💯 club
 
-Casern like redux but for when you have a lot of little state machines. For example handling chatbot states across thousands of conversations.
+unidirectional data-flow manager for persistent, multi-tenant state machines
+
+Casern like server side redux, for when you have a lot of little state machines. For example handling chatbot states across thousands of conversations.
 
 The structure of data flow is based on [barracks](https://www.npmjs.com/package/barracks). In casern, the state is persistent, and you can have a bunch of different state machines.
 
@@ -51,7 +53,7 @@ let stateChangeListeners = {
   }
 }
 let statedb = new PouchDB('statedb')
-const send = casern(statedb, preferences, services, reducers, stateChangeListeners)
+const {send} = casern(statedb, preferences, services, reducers, stateChangeListeners)
 
 // for now, lets just show one thing to track state of
 let someId = '12344'

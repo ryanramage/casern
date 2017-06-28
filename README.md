@@ -1,6 +1,6 @@
 # casern
 
-[![Build Status](https://secure.travis-ci.org/ryanramage/casern.svg?branch=master)](http://travis-ci.org/ryanramage/casern)
+[![Build Status](https://secure.travis-ci.org/ryanramage/casern.svg?branch=master)](http://travis-ci.org/ryanramage/casern) TAP 💯 club
 
 Casern like redux but for when you have a lot of little state machines. For example handling chatbot states across thousands of conversations.
 

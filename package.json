@@ -5,6 +5,10 @@
   "bin": "./bin/cli.js",
   "main": "./lib/index.js",
   "devDependencies": {
+    "pouchdb-adapter-http": "^6.2.0",
+    "pouchdb-adapter-memory": "^6.2.0",
+    "pouchdb-core": "^6.2.0",
+    "pouchdb-mapreduce": "^6.2.0",
     "pouchdb-memory": "^6.0.0",
     "standard": "^10.0.2",
     "tap": "^10.5.2",

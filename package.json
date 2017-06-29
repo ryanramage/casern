@@ -1,8 +1,7 @@
 {
   "name": "casern",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "unidirectional data-flow manager for persistent, multi-tenant state machines",
-  "bin": "./bin/cli.js",
   "main": "./lib/index.js",
   "devDependencies": {
     "pouchdb-adapter-http": "^6.2.0",

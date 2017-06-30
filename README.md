@@ -19,7 +19,6 @@ npm install casern
 ```
 const casern = require('casern')
 const PouchDB = require('pouchdb')
-const _ = require('lodash')
 const yourEmailSender = require('yourEmailSender')
 
 let preferences = {
@@ -40,9 +39,8 @@ let reducers = {
   checkTimeout: (preferences, state, data) => {
     if (!data.now) return state // we need the current time to be passed to us so we are a pure, side-effect free function
     if (state.status === 'timeout') return state // ignore some existing states
-    let nextState = _.clone(state) // you should always be safe and clone the state
-    if (state.when + preferences.timeoutAfter > data.now) nextState.status = 'timeout'
-    return nextState
+    if (state.when + preferences.timeoutAfter > data.now) state.status = 'timeout'
+    return state
   }
 }
 let stateChangeListeners = {

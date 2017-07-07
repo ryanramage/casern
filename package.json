@@ -1,6 +1,6 @@
 {
   "name": "casern",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "unidirectional data-flow manager for persistent, multi-tenant state machines",
   "main": "./lib/index.js",
   "devDependencies": {

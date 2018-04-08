@@ -6,6 +6,8 @@ unidirectional data-flow manager for persistent, multi-tenant state machines
 
 Casern is for server side redux, when you need a lot of little state machines. For example handling chatbot states across thousands of conversations.
 
+This project has been used succesfully for 1000's of parallel chatbot states.
+
 The structure of data flow is based on [barracks](https://www.npmjs.com/package/barracks). In casern, the state is persistent, and you can have many state machines.
 
 "A casern is a military barracks in a garrison town"

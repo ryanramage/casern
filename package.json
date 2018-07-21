@@ -26,6 +26,6 @@
   "homepage": "http://github.com/ryanramage/casern",
   "dependencies": {
     "async": "^2.4.1",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.10"
   }
 }

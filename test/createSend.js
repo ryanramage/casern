@@ -27,7 +27,7 @@ test('basic create send', (t) => {
   }
   const stateStore = {
     get: (id, done) => done(null, { current: oldState, prev: null }),
-    set: (id, currentDoc, nextState, data, done) => {
+    set: (id, currentDoc, nextState, data, to, done) => {
       t.deepEqual(nextState, _newState)
       done()
       t.end()
@@ -53,7 +53,7 @@ test('send throws an error is handled', (t) => {
   }
   const stateStore = {
     get: (id, done) => done(null, { current: oldState, prev: null }),
-    set: (id, currentDoc, nextState, data, done) => {
+    set: (id, currentDoc, nextState, data, to, done) => {
       t.deepEqual(nextState, _newState)
       t.end()
     }
@@ -78,7 +78,7 @@ test('stateStore get throws an error is handled', (t) => {
   }
   const stateStore = {
     get: (id, done) => done('bad things'),
-    set: (id, currentDoc, nextState, done) => {
+    set: (id, currentDoc, nextState, data, to, done) => {
       t.deepEqual(nextState, _newState)
       t.end()
     }
@@ -103,7 +103,7 @@ test('stateStore set throws an error is handled', (t) => {
   }
   const stateStore = {
     get: (id, done) => done(null, { current: oldState, prev: null }),
-    set: (id, currentDoc, nextState, data, done) => {
+    set: (id, currentDoc, nextState, data, to, done) => {
       done('bad things')
     }
   }
@@ -125,7 +125,7 @@ test('invaild target is handled', (t) => {
   }
   const stateStore = {
     get: (id, done) => done(null, { current: oldState, prev: null }),
-    set: (id, currentDoc, nextState, data, done) => {
+    set: (id, currentDoc, nextState, data, to, done) => {
       t.deepEqual(nextState, _newState)
       t.end()
     }
@@ -150,7 +150,7 @@ test('state is not stored if reduce does not change it', (t) => {
   }
   const stateStore = {
     get: (id, done) => done(null, { current: oldState, prev: null }),
-    set: (id, currentDoc, nextState, data, done) => {
+    set: (id, currentDoc, nextState, data, to, done) => {
       t.fail('we should not call set')
     }
   }
@@ -168,7 +168,7 @@ test('need a valid state id', t => {
   }
   const stateStore = {
     get: (id, done) => done(null, { current: oldState, prev: null }),
-    set: (id, currentDoc, nextState, data, done) => {
+    set: (id, currentDoc, nextState, data, to, done) => {
       t.fail('we should not call set')
     }
   }
